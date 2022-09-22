@@ -1,0 +1,7 @@
+C:\Coding\Digital House\ctd_microservices_docker\movie-service\src\main\java\com\digitalhouse\movieservice\api\service\MovieService.java
+C:\Coding\Digital House\ctd_microservices_docker\movie-service\src\main\java\com\digitalhouse\movieservice\domain\models\Movie.java
+C:\Coding\Digital House\ctd_microservices_docker\movie-service\src\main\java\com\digitalhouse\movieservice\domain\repositories\MovieRepository.java
+C:\Coding\Digital House\ctd_microservices_docker\movie-service\src\main\java\com\digitalhouse\movieservice\MovieServiceApplication.java
+C:\Coding\Digital House\ctd_microservices_docker\movie-service\src\main\java\com\digitalhouse\movieservice\api\controller\MovieController.java
+C:\Coding\Digital House\ctd_microservices_docker\movie-service\src\main\java\com\digitalhouse\movieservice\config\RabbitMQConsumerConfig.java
+C:\Coding\Digital House\ctd_microservices_docker\movie-service\src\main\java\com\digitalhouse\movieservice\config\RabbitTemplateConfig.java

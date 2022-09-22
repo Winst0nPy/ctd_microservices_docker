@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: com.digitalhouse.apigateway.ApiGatewayApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 8.389 s <<< FAILURE! - in com.digitalhouse.apigateway.ApiGatewayApplicationTests
+contextLoads  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://eureka-service:8761/eureka/apps/": No such host is known (eureka-service); nested exception is java.net.UnknownHostException: No such host is known (eureka-service)
+Caused by: java.net.UnknownHostException: No such host is known (eureka-service)
+
