@@ -11,6 +11,8 @@ ____
 | mongo-Express-asgard      | 8081  | 
 | Zipkin             | 9411  |
 | eureka-server      | 8761  |
+| RabbitMQ      | 15672  |
+
 
 
 ### SECOND STAGE

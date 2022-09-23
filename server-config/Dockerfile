@@ -12,4 +12,4 @@ From openjdk:8-jre-alpine
 COPY --from=builder target/config-service-0.0.1-SNAPSHOT.jar msb.jar
 
 # run jar
-CMD ["java", "-jar", "msb.jar"]
+ENTRYPOINT ["java", "-jar", "msb.jar"]

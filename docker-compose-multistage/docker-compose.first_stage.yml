@@ -4,7 +4,6 @@ services:
   mongodb:
     image: mongo
     container_name: mongodb-asgard
-    command: mongod --auth
     environment:
       - MONGO_INITDB_DATABASE=admin
       - MONGO_INITDB_ROOT_USERNAME=rootuser
