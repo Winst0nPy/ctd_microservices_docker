@@ -1,9 +1,10 @@
 version: "3.9"
 services:
 
-  mongodb:
+  mongodb_catalog:
     image: mongo
-    container_name: mongodb-asgard
+    container_name: mongodb_catalog
+    restart: always
     environment:
       - MONGO_INITDB_DATABASE=admin
       - MONGO_INITDB_ROOT_USERNAME=rootuser
@@ -11,28 +12,63 @@ services:
     ports:
       - "27018:27017"
 
-  mongo-express:
+  mongo-express_catalog:
     image: mongo-express
-    container_name: mongo-express-asgard
+    container_name: mongo-express_catalog
     restart: always
     ports:
-      - "8088:8081"
+      - "8082:8081"
     environment:
       - ME_CONFIG_MONGODB_ADMINUSERNAME=rootuser
       - ME_CONFIG_MONGODB_ADMINPASSWORD=rootpass
-      - ME_CONFIG_MONGODB_SERVER=mongodb
+      - ME_CONFIG_MONGODB_SERVER=mongodb_catalog
+
+  mongodb_series:
+    image: mongo
+    container_name: mongodb_series
+    restart: always
+    environment:
+      - MONGO_INITDB_DATABASE=admin
+      - MONGO_INITDB_ROOT_USERNAME=rootuser
+      - MONGO_INITDB_ROOT_PASSWORD=rootpass
+    ports:
+      - "27019:27017"
+
+  mongo-express_series:
+    image: mongo-express
+    container_name: mongo-express_series
+    restart: always
+    ports:
+      - "8083:8081"
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=rootuser
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=rootpass
+      - ME_CONFIG_MONGODB_SERVER=mongodb_series
 
   eureka-server:
     image: eureka-server
+    container_name: eureka-server
     ports:
       - "8761:8761"
     restart: unless-stopped
 
   zipkin:
     image: openzipkin/zipkin
+    container_name: zipkin
     ports:
       - "9411:9411"
     restart: unless-stopped
+
+  mysql-movie:
+      image: mysql:8
+      container_name: mysql-movie
+      restart: always
+      ports:
+        - "3310:3306"
+      volumes:
+        - ~/apps/mysql/mysql-movie:/var/lib/mysql
+      environment:
+        - MYSQL_ROOT_PASSWORD=1234
 
 networks:
   default:

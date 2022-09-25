@@ -9,7 +9,8 @@ RUN mvn clean package
 # Second stage: minimal runtime environment
 From openjdk:8-jre-alpine
 # copy jar from the first stage
-COPY --from=builder target/eureka-server-0.0.1-SNAPSHOT.jar msb.jar
+ARG JAR_FILE=target/*.jar
+COPY --from=builder ${JAR_FILE} app.jar
 
 # run jar
-CMD ["java", "-jar", "msb.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]

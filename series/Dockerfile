@@ -1,6 +1,12 @@
-FROM openjdk:8-jdk-alpine
-RUN apk update && apk add bash
+# First stage: complete build environment
+FROM maven:3.5.0-jdk-8-alpine AS builder
+COPY pom.xml .
+COPY src ./src
+RUN --mount=type=cache,target=/root/.m2 mvn clean package  -Dmaven.test.skip
+
+# Second stage: minimal runtime environment
+From openjdk:8-jre-alpine
 ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
-COPY wait-for-it.sh .
-ENTRYPOINT ["./wait-for-it.sh", "-t", "30","config-service:8888", "--", "java", "-jar", "app.jar"]
+COPY --from=builder ${JAR_FILE} app.jar
+# run jar
+ENTRYPOINT ["java", "-jar", "app.jar"]

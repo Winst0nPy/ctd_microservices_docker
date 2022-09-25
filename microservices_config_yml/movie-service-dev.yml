@@ -3,15 +3,17 @@ server:
 
 spring:
   datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1;
-    username: sa
-    password: sa
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://asgard:3310/movie-service
+    username: root
+    password: 1234
   sql:
     init:
       data-locations: classpath:movie.sql
   jpa:
-    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
     hibernate:
       ddl-auto: create-drop
 

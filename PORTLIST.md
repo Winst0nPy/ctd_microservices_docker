@@ -7,11 +7,14 @@ ____
 ### FIRST STAGE
 | NAME        | PORT           |
 | ------------- |:-------------:| 
-| mongoDB-asgard            | 27017 | 
-| mongo-Express-asgard      | 8081  | 
-| Zipkin             | 9411  |
-| eureka-server      | 8761  |
-| RabbitMQ      | 15672  |
+| mongodb_catalog            | 27018 | 
+| mongodb_series             | 27019 |
+| mongo-express_catalog      | 8082  | 
+| mongo-express_series       | 8083  |
+| mysql-movie                | 3308  |
+| Zipkin                     | 9411  |
+| eureka-server              | 8761  |
+| RabbitMQ                   | 15672 |
 
 
 
