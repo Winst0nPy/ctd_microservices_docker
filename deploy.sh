@@ -22,6 +22,5 @@ sh make.sh
 cd ..
 
 cd docker-compose-multistage
-docker-compose -f docker-compose.first_stage.yml up
-docker-compose -f docker-compose.second_stage.yml up
-docker-compose -f docker-compose.third_stage.yml up
+docker network create -d bridge asgard
+docker-compose -f docker-compose.first_stage.yml -f docker-compose.second_stage.yml -f docker-compose.third_stage.yml up --build
