@@ -11,7 +11,6 @@ spring:
     init:
       data-locations: classpath:movie.sql
   jpa:
-    defer-datasource-initialization: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
