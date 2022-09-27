@@ -11,8 +11,14 @@ public class RabbitMQSenderConfig {
     @Value("${queue.movie.name}")
     private String movieQueue;
 
+    @Value("{queue.serie.name}")
+    private String serieName;
+
+
     @Bean
     public Queue queue() {
         return new Queue(this.movieQueue, true);
     }
+
+
 }

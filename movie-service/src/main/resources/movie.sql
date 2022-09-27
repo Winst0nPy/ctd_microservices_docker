@@ -1,8 +1,8 @@
-create table movie
+create table if not exists movie
 (
-    name int null,
-    genre int null,
-    url_stream int null
+    name varchar(255) null,
+    genre varchar(255) null,
+    url_stream varchar(255) null
 );
 
 insert into movie(name, genre, url_stream) values('IT', 'terror', 'what');

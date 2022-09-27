@@ -1,4 +1,4 @@
-package com.dh.catalogservice.config;
+package com.digitalhouse.catalogservice.config;
 
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.loadbalancer.core.RandomLoadBalancer;

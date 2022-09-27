@@ -3,13 +3,15 @@ server:
 
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysql-movie:3310
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://mysql-movie:3310/movie
     username: root
     password: 1234
+
   sql:
     init:
       data-locations: classpath:movie.sql
+
   jpa:
     properties:
       hibernate:
