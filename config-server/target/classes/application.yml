@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+
+  zipkin:
+    enabled: true
+    baseUrl: http://zipkin:9411
+
+  cloud:
+    config:
+      server:
+        git:
+          searchPaths: microservices_config_yml
+          uri: ${CONFIG_URI_PATH_GITHUB:https://github.com/Winst0nPy/ctd_microservices_docker}
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka

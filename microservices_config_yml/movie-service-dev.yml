@@ -4,13 +4,14 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://asgard:3310/movie-service
+    url: jdbc:mysql://mysql-movie:3310/movie-service
     username: root
     password: 1234
   sql:
     init:
       data-locations: classpath:movie.sql
   jpa:
+    defer-datasource-initialization: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect

@@ -6,11 +6,11 @@ spring:
       fail-fast: true
       discovery:
         enabled: true
-        service-id: config-service
+        service-id: config-server
   profiles:
     active: dev
 
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-service:8761/eureka
+      defaultZone: http://eureka-server:8761/eureka

@@ -9,6 +9,8 @@
         <option value="$PROJECT_DIR$/movie-service/pom.xml" />
         <option value="$PROJECT_DIR$/server-config/pom.xml" />
         <option value="$PROJECT_DIR$/catalog-service/pom.xml" />
+        <option value="$PROJECT_DIR$/config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/series-service/pom.xml" />
       </list>
     </option>
   </component>

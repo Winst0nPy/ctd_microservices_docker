@@ -14,19 +14,17 @@ ____
 | mysql-movie                | 3308  |
 | Zipkin                     | 9411  |
 | eureka-server              | 8761  |
-| RabbitMQ                   | 15672 |
-
-
+| RabbitMQ                   | 5672 |
 
 ### SECOND STAGE
 | NAME        | PORT           |
 | ------------- |:-------------:| 
-| config-service     | 8888 | 
+| config-server     | 8888 | 
 | api-gateway        | 8080  |
 
 ### THIRD STAGE
 | NAME        | PORT           |
 | ------------- |:-------------:| 
-| series-service     | 8086  | 
+| serie-service     | 8086  | 
 | movie-service      | 8082  | 
-| catalog            | 9411  |
+| catalog            | 8084  |

@@ -14,18 +14,18 @@ public class FallbackController {
     @CircuitBreaker(name = "moviesService")
     @GetMapping("/movies")
     public ResponseEntity<String> moviesFallback() {
-        return new ResponseEntity<>("Servidor de movies no está disponible actualmente", HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>("movie-service no se encuentra disponible.", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @CircuitBreaker(name = "catalogService")
     @GetMapping("/catalogs")
     public ResponseEntity<String> catalogsFallback() {
-        return new ResponseEntity<>("Servidor de catalogos no está disponible actualmente", HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>("catalogs-service no se encuentra disponible.", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @CircuitBreaker(name = "seriesService")
     @GetMapping("/series")
     public ResponseEntity<String> seriesFallback() {
-        return new ResponseEntity<>("Servidor de series no está disponible actualmente", HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>("serie-service no se encuentra disponible.", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

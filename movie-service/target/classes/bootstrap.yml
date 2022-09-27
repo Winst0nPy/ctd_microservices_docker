@@ -1,21 +1,22 @@
 spring:
   application:
     name: movie-service
+
   cloud:
     config:
       fail-fast: true
       discovery:
         enabled: true
-        service-id: config-service
+        service-id: config-server
+
+  profiles:
+    active: dev
 
   rabbitmq:
     username: guest
     password: guest
     host: rabbitmq
     port: 5672
-
-  profiles:
-    active: dev
 
 queue:
   movie:
@@ -24,4 +25,4 @@ queue:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-service:8761/eureka
+      defaultZone: http://eureka-server:8761/eureka

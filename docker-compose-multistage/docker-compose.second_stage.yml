@@ -1,14 +1,16 @@
 version: "3.9"
 services:
 
-  config-service:
-    image: config-service
+  config-server:
+    image: config-server
+    container_name: config-server
     ports:
       - "8888:8888"
     restart: unless-stopped
 
   api-gateway:
     image: api-gateway
+    container_name: api-gateway
     ports:
       - "8080:8080"
     restart: unless-stopped

@@ -20,9 +20,9 @@ public class LoggingFilter extends AbstractGatewayFilterFactory<LoggingFilter.Co
     @Override
     public GatewayFilter apply(Config config) {
         return ((exchange, chain) -> {
-            LOG.info("Ha ingresado uan request para el path " + exchange.getRequest().getPath());
+            LOG.info("Request: " + exchange.getRequest().getPath());
             return chain.filter(exchange).then(Mono.fromRunnable(() -> {
-                LOG.info("Ha finalizado el procesamiento de la request");
+                LOG.info("Finalizado request");
             }));
         });
     }

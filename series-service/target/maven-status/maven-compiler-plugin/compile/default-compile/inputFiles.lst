@@ -1,0 +1,9 @@
+C:\Coding\Digital House\ctd_microservices_docker\series-service\src\main\java\com\dh\series\config\RabbitMQConsumerConfig.java
+C:\Coding\Digital House\ctd_microservices_docker\series-service\src\main\java\com\dh\series\controller\SeriesController.java
+C:\Coding\Digital House\ctd_microservices_docker\series-service\src\main\java\com\dh\series\model\Chapter.java
+C:\Coding\Digital House\ctd_microservices_docker\series-service\src\main\java\com\dh\series\model\Serie.java
+C:\Coding\Digital House\ctd_microservices_docker\series-service\src\main\java\com\dh\series\repository\SeriesRepository.java
+C:\Coding\Digital House\ctd_microservices_docker\series-service\src\main\java\com\dh\series\SeriesApplication.java
+C:\Coding\Digital House\ctd_microservices_docker\series-service\src\main\java\com\dh\series\model\Season.java
+C:\Coding\Digital House\ctd_microservices_docker\series-service\src\main\java\com\dh\series\service\SeriesService.java
+C:\Coding\Digital House\ctd_microservices_docker\series-service\src\main\java\com\dh\series\config\RabbitTemplateConfig.java
